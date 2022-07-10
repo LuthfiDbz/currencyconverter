@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  padding-top: 8%;
+  background-color: rgb(233, 233, 233);
+}
+
+.content {
+  background-color: #fff;
+  width: fit-content;
+  text-align: center;
+  margin: auto;
+  padding: 20px 30px;
+  border-radius: 5px;
+}
+
+.inputForm {
+  margin-top: 20px;
+  font-size: 20px;
+  text-align: left;
+  display: grid;
+  grid-template-areas: 
+    'lamount lamount lamount'
+    'amount amount amount'
+    'lfrom none lto'
+    'from reverse to'
+    'convert convert convert'
+  ;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+label[for=amount] {grid-area: lamount;}
+label[for=currencyFrom] {grid-area: lfrom;}
+label[for=currencyTo] {grid-area: lto;}
+
+#amount {
+  grid-area: amount;
+  font-size: 16px;
+  padding: 5px;
+}
+
+#currencyFrom {
+  grid-area: from;
+  font-size: 16px;
+  padding: 5px;
+  cursor: pointer;
+  width: 200px;
+}
+
+.reverseBtn {
+  grid-area: reverse;
+  cursor: pointer;
+}
+
+#currencyTo {
+  grid-area: to;
+  font-size: 16px;
+  padding: 5px;
+  cursor: pointer;
+  width: 200px;
+}
+
+.convertBtn {
+  grid-area: convert;
+  font-size: 18px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.result .exchangeRate {
+  font-size: 16px;
+  color: grey;
+  margin-bottom: 10px;
+}
+
+.result .resultAmount {
+  font-size: 36px;
+}
+
+.resultAmount span {
+  font-size: 24px;
+}

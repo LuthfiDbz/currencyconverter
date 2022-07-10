@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Currency Converter</title>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>Simple Currency Converter</h1>
+      <form action="#" class="inputForm">
+        <label for="amount">Amount</label> 
+        <input type="text" name="amount" id="amount" placeholder="0"> 
+        <label for="currencyFrom">From</label> 
+        <select name="currencyFrom" id="currencyFrom">
+          <option value="none" selected disabled>Select Currency</option>
+        </select>
+        <button class="reverseBtn" id="reverseBtn">><</button> 
+        <label for="currencyTo">To</label> 
+        <select name="currencyTo" id="currencyTo">
+          <option value="none" selected disabled>Select Currency</option>
+        </select> 
+        <button id="convertBtn" class="convertBtn">Convert</button>
+      </form>
+      <div class="result" id="result">
+        <h5 class="exchangeRate">Current Rate : -</h5>
+        <h1>Result</h1>
+        <h1>=</h1>
+        <h2 class="resultAmount">0</h2>
+        <!-- <h5 class="exchangeRate">1 IDR = 16.000,00 USD</h5>
+        <h2 class="resultAmount">0 <span>USD</span></h2> -->
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
