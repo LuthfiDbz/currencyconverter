@@ -1,28 +1,36 @@
 * {
   margin: 0;
   padding: 0;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
 .container {
   box-sizing: border-box;
   height: 100vh;
   width: 100vw;
-  padding-top: 8%;
-  background-color: rgb(233, 233, 233);
+  padding-top: 45%;
+  background-color: rgb(113, 1, 204);
 }
 
 .content {
   background-color: #fff;
-  width: fit-content;
+  width: 80%;
   text-align: center;
   margin: auto;
-  padding: 20px 30px;
-  border-radius: 5px;
+  border-radius: 8px;
+  padding: 25px 20px;
+}
+
+.content h1:first-child {
+  font-size: 22px;
+  padding-bottom: 30px;
+  color: black;
+  border-radius: 8px 8px 0 0;
 }
 
 .inputForm {
-  margin-top: 20px;
-  font-size: 20px;
+  margin-top: 10px;
+  font-size: 16px;
   text-align: left;
   display: grid;
   grid-template-areas: 
@@ -36,54 +44,173 @@
   margin-bottom: 30px;
 }
 
-label[for=amount] {grid-area: lamount;}
-label[for=currencyFrom] {grid-area: lfrom;}
-label[for=currencyTo] {grid-area: lto;}
+label[for=amount] {grid-area: lamount;font-weight: 600;}
+label[for=currencyFrom] {grid-area: lfrom;font-weight: 600;}
+label[for=currencyTo] {grid-area: lto;font-weight: 600;}
 
 #amount {
   grid-area: amount;
-  font-size: 16px;
-  padding: 5px;
+  font-size: 14px;
+  padding: 8px 5px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  border: 2px solid rgb(158, 158, 158);
 }
 
 #currencyFrom {
   grid-area: from;
-  font-size: 16px;
-  padding: 5px;
+  font-size: 14px;
+  padding: 0;
   cursor: pointer;
-  width: 200px;
+  width: 142px;
+  background-color: white;
+  border:2px solid rgb(158, 158, 158);
+  border-radius: 3px;
 }
 
 .reverseBtn {
   grid-area: reverse;
   cursor: pointer;
+  padding: 8px;
+  background-color: white;
+  border:none;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 #currencyTo {
   grid-area: to;
-  font-size: 16px;
-  padding: 5px;
+  font-size: 14px;
+  padding: 0;
   cursor: pointer;
-  width: 200px;
+  width: 142px;
+  background-color: white;
+  border:2px solid rgb(158, 158, 158);
+  border-radius: 3px;
 }
 
 .convertBtn {
+  margin-top: 20px;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(113, 1, 204);
   grid-area: convert;
-  font-size: 18px;
-  padding: 5px;
+  font-size: 16px;
+  padding-block: 10px;
   cursor: pointer;
+  font-weight: 400;
+}
+
+.convertBtn:hover {
+  background-color: rgb(130, 0, 236);
+}
+
+.convertBtn:active {
+  background-color: rgb(91, 0, 165);
 }
 
 .result .exchangeRate {
-  font-size: 16px;
+  font-size: 12px;
   color: grey;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.result h1:first-of-type {
+  font-size:22px;
+}
+
+.result h1:nth-of-type(2) {
+  color: rgb(71, 71, 71);
+  font-size: 18px;
 }
 
 .result .resultAmount {
-  font-size: 36px;
+  font-size: 32px;
 }
 
 .resultAmount span {
-  font-size: 24px;
+  font-size: 22px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    padding-top: 4.5%;
+  }
+
+  .content {
+    width: fit-content;
+    margin: auto;
+    border-radius: 8px;
+    padding: 30px 35px;
+  }
+
+  .content h1:first-child {
+    font-size: 32px;
+  }
+
+  .inputForm {
+    margin-top: 10px;
+    font-size: 20px;
+    grid-template-areas: 
+      'lamount lamount lamount'
+      'amount amount amount'
+      'lfrom none lto'
+      'from reverse to'
+      'convert convert convert'
+    ;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  #amount {
+    font-size: 18px;
+    padding: 10px 5px;
+    margin-bottom: 10px;
+  }
+
+  #currencyFrom {
+    font-size: 16px;
+    padding: 5px;
+    width: 200px;
+  }
+
+  .reverseBtn {
+    padding: 8px;
+    font-size: 24px;
+  }
+
+  #currencyTo {
+    font-size: 16px;
+    padding: 5px;
+    width: 200px;
+  }
+
+  .convertBtn {
+    margin-top: 10px;
+    border-radius: 3px;
+    font-size: 20px;
+    padding-block: 12px;
+    font-weight: 700;
+  }
+
+  .result .exchangeRate {
+    font-size: 16px;
+  }
+
+  .result h1:first-of-type {
+    font-size:28px;
+  }
+
+  .result h1:nth-of-type(2) {
+    font-size: 32px;
+  }
+
+  .result .resultAmount {
+    font-size: 40px;
+  }
+
+  .resultAmount span {
+    font-size: 24px;
+  }
 }
